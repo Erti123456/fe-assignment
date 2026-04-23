@@ -1,0 +1,166 @@
+@use "./../../init" as *;
+
+.c-solution-product {
+    position: relative;
+    width: 31.6rem;
+    height: 54rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    background: #fff;
+    border: 0.1rem solid #f1f0f6;
+    border-radius: 4px;
+    box-shadow: 0 0.4rem 0.8rem rgb(0 0 0 / 12%);
+
+    &__image {
+        width: 26.8rem;
+        height: 19.6rem;
+    }
+    &__buy-zone {
+        width: 26.8rem;
+        height: 25rem;
+        display: flex;
+        flex-direction: column;
+
+        &__details {
+            height: 17.3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+
+            &__identification {
+                height: 6.8rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0.8rem;
+
+                h3 {
+                    font-family: $f-wix-sans;
+                    font-size: 16px;
+                    color: #070216;
+                    line-height: 1.25;
+                    font-weight: 800;
+                }
+
+                &__sku {
+                    font-family: $f-dm-sans;
+                    font-size: 13px;
+                    font-weight: 400px;
+                    line-height: 1.6rem;
+                    color: #555555;
+                    letter-spacing: 0;
+                    display: flex;
+                    align-items: center;
+                }
+                &__stars {
+                    width: 10.5rem;
+                    display: flex;
+                    font-size: 12px;
+                    align-items: center;
+                    font-family: $f-dm-sans;
+                    &__number {
+                        width: 2rem;
+                    }
+                    &__star {
+                        width: 1.3rem;
+                        height: 1.3rem;
+                    }
+                }
+            }
+            &__prices {
+                height: 9.8rem;
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+
+                &__money {
+                    height: 5.9rem;
+                    width: 12.1rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.4rem;
+
+                    &__crossed-text {
+                        font-family: $f-dm-sans;
+                        font-weight: 400;
+                        color: #070216;
+                        line-height: 1;
+                        font-size: 13px;
+                        height: 17px;
+                        text-decoration: line-through;
+                    }
+
+                    h4 {
+                        font-family: $f-wix-sans;
+                        font-weight: 800;
+                        color: #dd1969;
+                        font-size: 20px;
+                        line-height: 1;
+                        text-transform: uppercase;
+                        height: 2.5rem;
+                        width: 8.5rem;
+                    }
+                    &__without-dph {
+                        font-family: $f-dm-sans;
+                        font-weight: 400;
+                        font-size: 13px;
+                        line-height: 1;
+                        letter-spacing: 0;
+                        color: #555555;
+                        span {
+                            font-size: 11px;
+                        }
+                    }
+                }
+                &__stock {
+                    font-family: $f-dm-sans;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 1;
+                    letter-spacing: 0;
+                    color: #149721;
+                    height: 1.8rem;
+                    p {
+                        text-decoration: underline solid;
+                        text-underline-offset: 0;
+                        text-decoration-skip-ink: auto;
+                    }
+                }
+            }
+        }
+        &__purchase {
+            height: 4.5rem;
+        }
+    }
+    &__position {
+        position: absolute;
+        top: 1.2rem;
+        left: 1.2rem;
+
+        &__labels {
+            display: flex;
+            gap: 0.4rem;
+
+            &__discount {
+                background-color: #7d2f78;
+                color: white;
+                font-size: 1.3rem;
+                border-radius: 0.4rem;
+                padding: 0.4rem 0.8rem;
+                font-family: $f-dm-sans;
+                font-weight: 600;
+            }
+            &__new {
+                background-color: #149721;
+                color: white;
+                font-size: 1.3rem;
+                border-radius: 0.4rem;
+                padding: 0.4rem 0.8rem;
+                font-family: $f-dm-sans;
+                font-weight: 600;
+            }
+        }
+    }
+}

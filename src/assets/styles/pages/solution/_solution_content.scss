@@ -1,0 +1,20 @@
+@use "./../../init" as *;
+
+@use "./solution_cta";
+@use "./solution_products";
+
+.c-solution-content {
+    display: flex;
+    gap: 0 2.4rem;
+
+    &__cta {
+        width: 64rem;
+    }
+
+    &__products {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        gap: 2.4rem;
+    }
+}
