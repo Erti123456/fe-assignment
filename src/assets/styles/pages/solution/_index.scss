@@ -2,9 +2,29 @@
 
 @use "./solution_banner";
 @use "./solution_content";
+@use "./_solution_categories";
 
 .l-solution {
     &__banner {
         margin-bottom: 10rem;
+    }
+
+    &__content-and-categories-container {
+        width: 100%;
+        max-width: 132rem;
+        height: 151.7rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 8rem;
+    }
+
+    &__categories {
+        width: 100%;
+
+        .l-container {
+            max-width: 100%;
+            padding: 0;
+        }
     }
 }

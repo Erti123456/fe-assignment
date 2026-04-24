@@ -5,7 +5,11 @@
     width: 31.6rem;
     height: 54rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
     align-items: center;
     flex-direction: column;
     gap: 3rem;
@@ -14,15 +18,84 @@
     border-radius: 4px;
     box-shadow: 0 0.4rem 0.8rem rgb(0 0 0 / 12%);
 
+    .two-icons {
+        display: flex;
+        flex-direction: row;
+        gap: 0.6rem;
+        position: absolute;
+        top: 1.2rem;
+        right: 1.2rem;
+
+        .heart-div {
+            width: 3.2rem;
+            height: 3.2rem;
+            border-radius: 0.4rem;
+            padding: 0.9rem;
+            background-color: #f1f0f6;
+            span {
+                height: 1.6rem;
+                width: 1.6rem;
+                position: relative;
+                .icon {
+                    position: absolute;
+                    width: 13.93541145324707px;
+                    height: 12.154549598693848px;
+                    top: 0.2rem;
+                    left: 0.103rem;
+                    border: 1.6px;
+                    color: #070216;
+                }
+            }
+        }
+        .scale-div {
+            width: 3.2rem;
+            height: 3.2rem;
+            border-radius: 0.4rem;
+            padding: 0.9rem;
+            background-color: #f1f0f6;
+
+            span {
+                position: relative;
+                height: 1.6rem;
+                width: 1.6rem;
+
+                .icon {
+                    position: absolute;
+                    width: 1.6rem;
+                    height: 1.538rem;
+                    top: 0.031rem;
+                    border: 0.01rem #070216;
+                    color: #070216;
+                }
+            }
+        }
+    }
+
+    .hand-div {
+        position: absolute;
+        top: 5.3rem;
+        left: 25.6rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        .icon {
+            width: 1.801rem;
+            height: 2.1rem;
+            top: 0.15rem;
+            left: 0.299rem;
+            color: #070216;
+        }
+    }
     &__image {
         width: 26.8rem;
         height: 19.6rem;
+        object-fit: contain;
     }
     &__buy-zone {
         width: 26.8rem;
         height: 25rem;
         display: flex;
         flex-direction: column;
+        gap: 3.2rem;
 
         &__details {
             height: 17.3rem;
@@ -117,28 +190,121 @@
                 &__stock {
                     font-family: $f-dm-sans;
                     font-weight: 600;
-                    font-size: 14px;
                     line-height: 1;
                     letter-spacing: 0;
                     color: #149721;
                     height: 1.8rem;
                     p {
+                        display: inline-block;
                         text-decoration: underline solid;
-                        text-underline-offset: 0;
-                        text-decoration-skip-ink: auto;
+                        font-size: 14px;
                     }
                 }
             }
         }
         &__purchase {
             height: 4.5rem;
+            display: flex;
+            flex-direction: row;
+            gap: 1.6rem;
+            justify-content: space-between;
+            .add-remove-input {
+                display: flex;
+                flex-direction: row;
+                width: 8.6rem;
+                height: 4.5rem;
+                justify-content: space-between;
+                align-items: center;
+                gap: 0.8rem;
+
+                span {
+                    height: 2.1rem;
+                    width: 1.2rem;
+                    border-radius: 0.4rem;
+                    position: relative;
+
+                    .minus {
+                        width: 1.2rem;
+                        height: 0.2rem;
+                        position: absolute;
+                        top: 0.9rem;
+                        left: 0.1rem;
+                        color: #070216;
+                    }
+
+                    .plus {
+                        position: absolute;
+                        top: 0.4rem;
+                        height: 1.2rem;
+                        width: 1.2rem;
+                        color: #070216;
+                    }
+                }
+                input {
+                    width: 4.6rem;
+                    height: 4.4rem;
+                    border: 0.1rem #f1f0f6 solid;
+                    border-radius: 0.4rem;
+                    padding-left: 0.6rem;
+                    padding-right: 0.6rem;
+                    background-color: white;
+                    text-align: center;
+                    font-weight: 600;
+                    font-size: 1.4rem;
+                    line-height: 1;
+                    letter-spacing: 0;
+                    font-family: $f-dm-sans;
+                    color: #070216;
+                }
+                input::placeholder {
+                    color: #070216;
+                    height: 1.8rem;
+                    width: 0.5rem;
+                }
+            }
+            button {
+                display: flex;
+                gap: 0.8rem;
+                width: 15.6rem;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1.6rem 2rem;
+                color: #fff;
+                cursor: pointer;
+                background: #dd1969;
+                border: none;
+                border-radius: 0.4rem;
+                transition: background 0.2s ease;
+
+                &:hover {
+                    background: #c01559;
+                }
+
+                &:active {
+                    background: #a01249;
+                }
+
+                p {
+                    font-family: $f-wix-sans;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    white-space: nowrap;
+                    line-height: 1;
+                    margin: 0;
+                }
+
+                .sb-icon {
+                    flex-shrink: 0;
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
         }
     }
     &__position {
         position: absolute;
         top: 1.2rem;
         left: 1.2rem;
-
         &__labels {
             display: flex;
             gap: 0.4rem;
