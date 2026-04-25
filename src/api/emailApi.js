@@ -23,9 +23,7 @@ export const validateEmail = async (email) => {
 
         const data = await response.json();
         return data;
-    } catch (error) {
-        console.error("💥 Error:", error);
-
+    } catch {
         return {
             success: false,
             message: "Network error: Unable to reach validation server",

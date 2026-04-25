@@ -26,8 +26,6 @@ class Router {
             this.currentRoute = path;
             window.history.pushState({}, "", path);
             this.routes[path]();
-        } else {
-            console.warn(`Route not found: ${path}`);
         }
     }
 

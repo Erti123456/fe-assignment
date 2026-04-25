@@ -27,6 +27,15 @@
         border-radius: 0.8rem;
     }
 
+    &__shadow {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+    }
+
     &__content {
         position: relative;
         display: flex;
@@ -92,6 +101,116 @@
                 flex-shrink: 0;
                 width: 2rem;
                 height: 2rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1350px) {
+    .c-solution-banner {
+        height: 48rem;
+
+        &__image {
+            background-position: center;
+        }
+
+        &__content {
+            gap: 2.4rem;
+            padding: 8rem 6rem;
+
+            &__title {
+                width: 48rem;
+                font-size: 4.4rem;
+                line-height: 1.2;
+            }
+
+            &__description {
+                width: 48rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1050px) {
+    .c-solution-banner {
+        height: 42rem;
+
+        &__image {
+            background-position: center;
+        }
+
+        &__content {
+            gap: 2.4rem;
+            padding: 5.6rem 4rem;
+
+            &__title {
+                width: 42rem;
+                font-size: 3.8rem;
+                line-height: 1.2;
+            }
+
+            &__description {
+                width: 42rem;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+@media (min-width: 360px) and (max-width: 719px) {
+    .c-solution-banner {
+        height: 42rem;
+        border-radius: 0.4rem;
+
+        &__image {
+            background-position: 58% center;
+            border-radius: 0.4rem;
+        }
+
+        &__shadow {
+            object-position: center;
+        }
+
+        &__overlay {
+            background: linear-gradient(
+                180deg,
+                rgb(0 0 0 / 10%) 0%,
+                rgb(0 0 0 / 48%) 46%,
+                rgb(0 0 0 / 72%) 100%
+            );
+            border-radius: 0.4rem;
+        }
+
+        &__content {
+            justify-content: flex-end;
+            gap: 1.8rem;
+            padding: 3.2rem 2.5rem 2.2rem;
+
+            &__title {
+                width: 100%;
+                font-size: 3.2rem;
+                line-height: 1.22;
+            }
+
+            &__description {
+                width: 100%;
+                font-size: 1.4rem;
+                line-height: 1.45;
+            }
+
+            &__button {
+                min-width: 21.4rem;
+                height: 4.4rem;
+                padding: 1.2rem 1.6rem;
+
+                .sb-text {
+                    font-size: 1.4rem;
+                }
+
+                .sb-icon {
+                    width: 1.8rem;
+                    height: 1.8rem;
+                }
             }
         }
     }

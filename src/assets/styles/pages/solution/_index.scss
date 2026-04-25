@@ -3,6 +3,7 @@
 @use "./solution_banner";
 @use "./solution_content";
 @use "./_solution_categories";
+@use "./_solution_modal";
 
 .l-solution {
     &__banner {
@@ -25,6 +26,50 @@
         .l-container {
             max-width: 100%;
             padding: 0;
+        }
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1350px) {
+    .l-solution {
+        &__banner {
+            margin-bottom: 7rem;
+        }
+
+        &__content-and-categories-container {
+            width: calc(100% - 4rem);
+            max-width: 118rem;
+            height: auto;
+            gap: 7rem;
+        }
+    }
+}
+
+@media (min-width: 720px) and (max-width: 1050px) {
+    .l-solution {
+        &__banner {
+            margin-bottom: 5.6rem;
+        }
+
+        &__content-and-categories-container {
+            width: calc(100% - 3.2rem);
+            max-width: 92rem;
+            height: auto;
+            gap: 5.6rem;
+        }
+    }
+}
+
+@media (min-width: 360px) and (max-width: 719px) {
+    .l-solution {
+        &__banner {
+            margin-bottom: 4.8rem;
+        }
+
+        &__content-and-categories-container {
+            width: calc(100% - 4rem);
+            height: auto;
+            gap: 4.8rem;
         }
     }
 }

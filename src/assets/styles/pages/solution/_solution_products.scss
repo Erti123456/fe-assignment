@@ -330,3 +330,17 @@
         }
     }
 }
+
+@media (min-width: 720px) and (max-width: 1050px) {
+    .c-solution-product {
+        flex: 0 0 31.6rem;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 719px) {
+    .c-solution-product {
+        width: 100%;
+        max-width: 31.6rem;
+        flex: 0 0 auto;
+    }
+}

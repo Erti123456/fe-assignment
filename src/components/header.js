@@ -39,6 +39,7 @@ export const renderHeader = () => {
                             Solution
                         </a>
                     </nav>
+                </div>
             </div>
         </header>
     `;

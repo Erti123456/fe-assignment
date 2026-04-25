@@ -50,6 +50,12 @@ const init = () => {
     router.addRoute("/", showAssignmentPage);
     router.addRoute("/solution", showSolutionPage);
 
+    window.addEventListener("solution-rerender", () => {
+        if (router.getCurrentRoute() === "/solution") {
+            showSolutionPage();
+        }
+    });
+
     // Initialize router
     router.init();
 };
